@@ -14,6 +14,11 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(noteRoutes);
 
+app.get("/", (req, res) => {
+  res.send("YouNote API")
+}
+)
+
 app.listen(port, () => {
   console.log(`Server is listening on http://localhost:${port}`);
 });
